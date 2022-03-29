@@ -43,7 +43,7 @@ for j in range(10):
 				#writes enviroment + reaction
 				f.write(",".join(before)+","+str(reaction)+"\n")
 			#if we have completed simulation add total score to 50 simulation sum
-			if done == True:
+			if done:
 				avg += tot
 	#prints our avg score across the 50 simulaions
 	print("AVG:" + str(avg/50.0))
