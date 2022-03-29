@@ -12,4 +12,4 @@ seed.py = uses past data from a genetic algorithm approach to generate a "seed" 
 mllib.py = a wrapper for scikit learns mlp classifier that I built
 TrainNetwork.py = main file that continuosly trains and reruns a model to constantly improve it
 
-[The Program in Action](https://www.youtube.com/watch?v=2kQWBPc8SOU)
+[An older version in action](https://www.youtube.com/watch?v=2kQWBPc8SOU)
