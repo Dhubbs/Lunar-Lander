@@ -13,7 +13,7 @@ env = gym.make('LunarLander-v2')
 #repeats the train test simulation 10 times, this value can be increased to allow for longer execution and more training
 for j in range(10):
     #retrains the model with the data stored in the out.txt file
-	#fir is a function from mllib.py
+	#fit is a function from mllib.py
 	accuracy,model = fit((100,50,10),"out.txt")
 	#accuracy of the newly trained model
 	print("Accuracy:"+ str(accuracy))
@@ -39,11 +39,9 @@ for j in range(10):
 			#keeps a rolling total of the current score for the simulation
 			tot += score
 			#if the action we took had a positive impact on our total score we want to record the enviroment + the action taken
-			if score>0.3:
+			if score>0.0:
 				#writes enviroment + reaction
-				for j in before:
-					f.write(str(j)+",")
-				f.write(str(reaction) + "\n")
+				f.write(",".join(before)+","+str(reaction)+"\n")
 			#if we have completed simulation add total score to 50 simulation sum
 			if done == True:
 				avg += tot
